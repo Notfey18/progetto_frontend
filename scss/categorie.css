@@ -1,0 +1,53 @@
+#grigliaCategorie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.card-categoria {
+  flex: 1 0 150px;
+  max-width: 200px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card-categoria:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+}
+
+.card-categoria img {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.drop-area {
+  border: 2px dashed #888;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: 0.2s ease;
+}
+
+.drop-area.highlight {
+  background-color: #eef;
+  border-color: #36f;
+}
+
+#anteprimaImmagine {
+  width: 120px;
+  margin-top: 10px;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=categorie.css.map */

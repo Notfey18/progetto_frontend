@@ -52,8 +52,8 @@ function mostraDettaglio() {
   card.className = "dettaglio-card";
   card.innerHTML = `
     <div class="dettaglio-image">
-      <img src="${imgSrc}" alt="${ann.titolo}" class="img-annuncio" id="imgPrincipale">
-      <div class="galleria-wrapper">${galleriaHtml}</div>
+    <img src="${imgSrc}" alt="${ann.titolo}" id="imgPrincipale"
+    style="width: 100%; height: auto; border-radius: 8px; display: block; object-fit: cover;">
     </div>
     <div class="dettaglio-info">
       <h2>${ann.titolo}</h2>
