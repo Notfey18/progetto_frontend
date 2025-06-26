@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina Utente - AnnunciOnline</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header">
+      <img src="../img/Logo.jpg" alt="Logo" width="150" height="150" />
+      <h1>AnnunciOnline</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categorie.html">Categorie</a></li>
+          <li><a href="annunci.html">Inserisci annuncio</a></li>
+          <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 id="welcomeMsg"></h2>
+
+    <h3>I tuoi annunci inseriti:</h3>
+    <div id="annunciUtente" class="griglia-annunci"></div>
+
+    <button onclick="location.href='modifica.html'" style="margin-top: 20px;">Modifica profilo</button>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AnnunciOnline. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/utente.js"></script>
+</body>
+</html>

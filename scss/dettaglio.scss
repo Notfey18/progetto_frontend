@@ -1,0 +1,94 @@
+.container-dettaglio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 40px auto;
+  max-width: 1000px;
+  align-items: flex-start;
+}
+
+.img-annuncio {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dettaglio-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dettaglio-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.galleria-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.galleria-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #ccc;
+}
+
+.galleria-thumb:hover {
+  transform: scale(1.05);
+  border-color: #0e76a8;
+}
+
+.dettaglio-info {
+  flex: 1 1 400px;
+}
+
+.btn-preferiti {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #0e76a8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-preferiti.added {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .container-dettaglio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-annuncio {
+    max-width: 90%;
+  }
+
+  .galleria-thumb {
+    width: 50px;
+    height: 50px;
+  }
+}

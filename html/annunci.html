@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inserisci Annuncio - AnnunciOnline</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header">
+      <h1>Vendo,Subito</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categorie.html">Categorie</a></li>
+          <li><a href="utente.html">Pagina utente</a></li>
+          <li><a href="login.html" id="loginLink">Login</a></li>
+          <li><a href="#" id="logoutBtn" style="display:none;">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Inserisci un nuovo annuncio</h2>
+
+    <form id="annuncioForm">
+      <label for="titolo">Titolo</label>
+      <input type="text" id="titolo" required />
+
+      <label for="descrizione">Descrizione</label>
+      <textarea id="descrizione" required></textarea>
+
+      <label for="prezzo">Prezzo (€)</label>
+      <input type="number" id="prezzo" required />
+
+      <label for="citta">Città</label>
+      <input type="text" id="citta" required />
+
+      <!-- <label for="categoria">Categoria</label> -->
+      <select id="categoria" required>
+        <option value="">Scegli una categoria</option>
+      </select>
+
+      <label>Immagine (trascina un file qui)</label>
+      <div id="dropArea" class="drop-area">
+        Trascina qui l'immagine del tuo annuncio
+        <br />
+        <img id="anteprimaImmagine" src="img/default.jpg" alt="Anteprima immagine" />
+      </div>
+
+      <button type="submit" style="margin-top: 20px;">Pubblica annuncio</button>
+    </form>
+
+    <p id="conferma" style="margin-top: 15px; color: green; font-weight: bold;"></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AnnunciOnline. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="../js/annunci.js"></script>
+</body>
+</html>

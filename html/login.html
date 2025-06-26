@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - AnnunciOnline</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="container header">
+      <img src="../img/Logo.jpg" alt="Logo" width="150" height="150" />
+      <h1>Vendo,Subito</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categorie.html">Categorie</a></li>
+          <li><a href="annunci.html">Inserisci annuncio</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required /><br /><br />
+
+      <button type="submit">Accedi</button>
+    </form>
+
+    <p id="loginMessage" style="color: red; margin-top: 15px;"></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AnnunciOnline. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const message = document.getElementById("loginMessage");
+
+      if (user === "demo" && pass === "1234") {
+        sessionStorage.setItem("utenteLoggato", user);
+        message.style.color = "green";
+        message.textContent = "Login effettuato! Reindirizzamento...";
+        setTimeout(() => window.location.href = "index.html", 1000);
+      } else {
+        message.textContent = "Credenziali errate. Riprova.";
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categorie - AnnunciOnline</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header">
+      <img src="../img/Logo.jpg" alt="Logo" width="150" height="150" />
+      <h1>Vendo,Subito</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inserisci.html">Inserisci</a></li>
+          <li><a href="utente.html">Pagina utente</a></li>
+          <li><a href="login.html" id="loginLink">Login</a></li>
+          <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Categorie disponibili</h2>
+    <div id="grigliaCategorie" class="griglia-annunci"></div>
+
+    <h2 id="titoloAnnunci" style="margin-top: 40px; display: none;">Annunci per categoria: <span id="catNome"></span></h2>
+    <div id="grigliaAnnunci" class="griglia-annunci"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Vendo, Subito. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+  <script src="../js/categorie.js"></script>
+</body>
+</html>
