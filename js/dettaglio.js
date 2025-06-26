@@ -45,15 +45,19 @@ function mostraDettaglio() {
   const imgSrc = ann.immagine_principale || ann.galleria_immagini?.[0] || 'img/default.jpg';
 
   const galleriaHtml = (ann.galleria_immagini || [])
-    .map(url => `<img src="${url}" class="galleria-thumb" alt="Miniatura">`)
+    .map(url => `<img src="${url}" class="galleria-thumb" alt="Miniatura"
+      style="width: 80px; height: 80px; object-fit: cover; margin-right: 10px; border-radius: 5px; cursor: pointer;">`)
     .join("");
 
   const card = document.createElement("div");
   card.className = "dettaglio-card";
   card.innerHTML = `
     <div class="dettaglio-image">
-    <img src="${imgSrc}" alt="${ann.titolo}" id="imgPrincipale"
-    style="width: 100%; height: auto; border-radius: 8px; display: block; object-fit: cover;">
+      <img src="${imgSrc}" alt="${ann.titolo}" id="imgPrincipale"
+        style="width: 300px; height: auto; max-width: 100%; border-radius: 8px; display: block; margin: 0 auto; object-fit: cover;">
+      <div class="galleria-wrapper" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px 0; margin-top: 10px; scrollbar-width: thin;">
+        ${galleriaHtml}
+      </div>
     </div>
     <div class="dettaglio-info">
       <h2>${ann.titolo}</h2>
